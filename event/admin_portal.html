@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/admin_portal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/admin_portal.js">
+    </script>
+    <title>Event Management System</title>
+  </head>
+  <body>
+    <!-- logout button -->
+
+    <div class=main_header>
+      <div >
+        <button class="BUTTON" id="log_button">LogOut</button>
+      </div>
+      <div class="heading">
+              <h1 id="portal">Event Management (Admin) Portal</h1>
+      </div>
+
+      <div class="image_user">
+      <h4>My Profile</h4>
+      </div>
+
+    </div>
+
+    <hr>
+    <!-- admin login -->
+    <div class="menu">
+      <div class="menu-btn">
+        <div>
+          <button class="BUTTON btn" id="add_book_button" onclick="location.href='add_book.html'">Add Event</button>
+        </div>
+      </div>
+      <div class="menu-item">
+
+        <!-- search -->
+      <div class="search-menu">
+
+        <form class="Search" id="Books_search">
+          <input type="text" id="search-bar" placeholder="Search Event">
+          <a href="#"><img src="./css/search-icon.png" class="search-icon"></a>
+          <button id="show_books">Show all Event</button>
+        </form>
+
+        <form class="Search" id="Students_search">
+          <input type="text" id="search-bar" placeholder="Search Students">
+          <a href="#"><img src="./css/search-icon.png" class="search-icon1"></a>
+          <button id="show_students">Show all students</button>
+        </form>
+
+      </div>
+      
+        <!-- content-table -->
+        <div class="main_user_block" id="Result">  
+          <ul id="users">
+          </ul>
+          <ul id="books">
+          </ul> 
+        </div>  
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-firestore.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+  </body>
+</html>
